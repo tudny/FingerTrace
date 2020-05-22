@@ -4,7 +4,7 @@ using namespace std;
 
 int main() {
     string path = "path\\to\\your\\folder\\values.txt";
-    string pathXML = "vpath\\to\\your\\folder\\aluesXML.txt";
+    string pathXML = "path\\to\\your\\folder\\valuesXML.txt";
     fstream in, out;
     in.open(path);
     out.open(pathXML);
