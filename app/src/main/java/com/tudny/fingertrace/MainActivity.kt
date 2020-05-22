@@ -3,14 +3,12 @@ package com.tudny.fingertrace
 import android.graphics.Bitmap
 import android.os.AsyncTask
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.FrameLayout
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.graphics.scale
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -70,7 +68,7 @@ class MainActivity : AppCompatActivity() {
 class ImageProcess(private val coefficientsString: Array<String>, private val activity: MainActivity) : AsyncTask<Bitmap, Float, Int>() {
 
     private val coefficients: MutableList<Float> = mutableListOf()
-    private val digits = 10;
+    private val digits = 10
 
     override fun onPreExecute() {
         coefficientsString.forEach {
@@ -84,7 +82,7 @@ class ImageProcess(private val coefficientsString: Array<String>, private val ac
         for( digit in 0 until digits ) {
             for (y in 0 until bitmap.height) {
                 for (x in 0 until bitmap.width) {
-                    val pixelId = x + 28 * y;
+                    val pixelId = x + 28 * y
                     val coefficientsId = digit * (28 * 28) + pixelId
                     val pixelBrightness = getPixelBrightness(bitmap.getPixel(x, y))
                     // print("$pixelBrightness ")
