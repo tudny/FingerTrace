@@ -1,2 +1,2 @@
 # FingerTrace
-## Android app using ML to finger written numbers
+## Android app using ML to recognize finger written numbers
